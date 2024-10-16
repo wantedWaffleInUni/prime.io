@@ -12,7 +12,7 @@
     "start-server": "node ./src/server.js",
     "dev-server": "nodemon server.js",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "main -d dist"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
