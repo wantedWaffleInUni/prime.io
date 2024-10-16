@@ -1,0 +1,15 @@
+.force-start-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .force-start-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }  

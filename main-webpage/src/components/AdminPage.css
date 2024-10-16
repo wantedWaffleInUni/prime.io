@@ -1,0 +1,180 @@
+.admin-dashboard {
+    width: 97%;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensure everything is centered */
+}
+
+.team-log-time {
+    margin-top: 10px;
+    width: 100%;
+    position: static;
+    border: var(--dashboard-table-border);
+    border-radius: 10px;
+    font-family: var(--main-font);
+    font-size: large;
+    box-shadow: 5px 9px #00000066;
+    transition: 0.3s;
+    padding: 15
+}
+
+.team-log-time:hover {
+    transform: scale(1.005);
+}
+
+.team-log-time table {
+    padding: 25px;
+    font-size: 20px;
+}
+
+.team-log-time h1 {
+    font-family: var(--main-font);
+    padding: 0 25px;
+}
+
+.total-contributions {
+    margin-top: 20px;
+    padding: 25px 0;
+    width: 100%;
+    position: static;
+    border: var(--dashboard-table-border);
+    border-radius: 10px;
+    font-family: var(--main-font);
+    font-size: 20px;
+    box-shadow: 5px 9px #00000066;
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.total-contributions:hover {
+    transform: scale(1.005);
+}
+
+.total-contributions h1 {
+    padding: 0 25px;
+}
+
+.total-contributions body {
+    padding: 25px;
+}
+
+.date-range {
+    margin-top: 5px;
+    padding: 25px 4px 25px 25px;
+    width: 38%;
+    position: static;
+    border: var(--dashboard-table-border);
+    border-radius: 10px;
+    font-family: var(--main-font);
+    box-shadow: 5px 9px #00000066;
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date-range:hover {
+    transform: scale(1.005);
+}
+
+/* Styles for the Create User section */
+.create-user-section {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the button horizontally */
+    flex-direction: column; /* Align items in a column for future content */
+}
+
+.create-user-toggle-button {
+    padding: 10px 70px; /* Increase padding for better spacing */
+    font-size: 16px;
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the button horizontally */
+    text-align: center; /* Center text */
+    white-space: nowrap; /* Prevent text from breaking into two lines */
+}
+
+.create-user-toggle-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.create-user-form {
+    width: 400px;
+    padding: 20px;
+    border: var(--dashboard-table-border);
+    border-radius: 10px;
+    box-shadow: 5px 9px #00000066;
+    background-color: #f9f9f9;
+}
+
+.create-user-form h2 {
+    text-align: center;
+}
+
+.create-user-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.create-user-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.create-user-submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-user-submit-button:hover {
+    background-color: #218838;
+}
+
+/* .burndown-chart-section {
+    margin-top: 20px;
+    padding: 25px 0px 25px 0px;
+    width: 100%;
+    position: static;
+    border: var(--dashboard-table-border);
+    border-radius: 10px;
+    font-family: var(--main-font);
+    box-shadow: 5px 9px #00000066;
+    transition: 0.3s;
+}
+
+.burndown-chart-section:hover {
+    transform: scale(1.005);
+}
+
+.burndown-chart-section h1 {
+    padding: 0px 25px 0px 25px;
+}
+
+.burndown-chart-section body {
+    padding: 25px 25px 25px 25px;
+} */

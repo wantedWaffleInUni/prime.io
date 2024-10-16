@@ -1,0 +1,267 @@
+[data-theme = 'default-light'] {
+  --header-bg: white;
+  --header-text-font: 'Neo Sans', serif;
+  --header-text-color: black;
+  --header-text-size: 40px;
+  --header-border-bot: 5px solid black;
+  --main-bg: rgb(255, 255, 255);
+  --main-bg-size: 100%;
+  --main-font: 'Neo-Sans', serif;
+  --sidebar-bg: #ffffff;
+  --sidebar-border-right: 3px solid black;
+  --sidebar-button-border-sides: None;
+  --sidebar-button-border-topbot: 3px solid grey;
+  --sidebar-button-color: ;
+  --sidebar-font: 'Neo-Sans', serif;
+  --sidebar-font-size: 25px;
+  --sidebar-font-color: black;
+  --sidebar-button-hover-color: rgb(255, 255, 255); 
+
+  --dashboard-table-border: 1px solid rgb(0,0,0,0.3); 
+  --dashboard-table-content-bg: none;
+
+  --sprint-card-border: 2px solid rgb(0,0,0,0.3);
+}
+
+[data-theme = 'default-dark'] {
+  --header-bg: rgb(65, 65, 65);
+  --header-text-font: 'Neo Sans', serif;
+  --header-text-color: rgb(255, 255, 255);
+  --header-text-size: 40px;
+  --header-border-bot: 5px solid black;
+  --main-bg: rgb(65, 65, 65);
+  --main-bg-size: 100%;
+  --main-font: 'Neo-Sans', serif;
+  --sidebar-bg: rgb(65, 65, 65);
+  --sidebar-border-right: 1px solid black;
+  --sidebar-button-border-sides: None;
+  --sidebar-button-border-topbot: 3px solid rgb(255, 255, 255);
+  --sidebar-button-color: rgb(65, 65, 65);
+  --sidebar-font: 'Neo-Sans', serif;
+  --sidebar-font-size: 25px;
+  --sidebar-font-color: rgb(255, 255, 255);
+  --sidebar-button-hover-color: grey; 
+  --dashboard-table-border: 1px solid rgba(207, 207, 207, 0.3); 
+  --dashboard-table-content-bg: none; 
+}
+
+[data-theme = 'barbie'] {
+  --header-bg: rgb(255, 98, 242);
+  --header-text-font: 'BarbieFont', sans-serif;
+  --header-text-color: #ffb5f9;
+  --header-text-size:40px;
+  --header-border-bot: 5px solid #ff00dd;
+  --main-bg: url(./assets/images/BarbieBG.png);
+  --main-bg-size: 100%;
+  --main-font: 'BarbieFont', sans-serif;
+  --sidebar-bg: rgba(255, 114, 255, 0.6);
+  --sidebar-border-right: none;
+  --sidebar-button-color: rgb(240, 79, 255);
+  --sidebar-button-border-sides: 3px solid rgb(255, 155, 255);
+  --sidebar-button-border-topbot: 3px solid rgb(255, 155, 255);
+  --sidebar-font: 'BarbieFont', serif;
+  --sidebar-font-size: 30px;
+  --sidebar-font-color: rgb(240, 189, 253);
+  --dashboard-table-border: 1px solid rgba(255, 0, 255, 0.3); 
+  --dashboard-table-content-bg: rgb(232, 168, 248); 
+}
+
+[data-theme = 'anime-aot'] {
+  --header-bg: rgb(170, 154, 125);
+  --header-text-font: 'AOT', sans-serif;
+  --header-text-color: rgb(7, 7, 7);
+  --header-text-size: 40px;
+  --header-border-bot: 3px solid rgb(78, 73, 56);
+  --main-bg: url(./assets/images/AttackOnTitan.png);
+  --main-bg-size: 100%;
+  --sidebar-bg: rgb(138, 126, 108);
+  --sidebar-border-right: 3px solid rgb(78, 73, 56);
+}
+
+[data-theme = 'nature'] {
+  --header-bg: rgb(63, 99, 58);
+  --header-text-font: 'nature', serif;
+  --header-text-color: rgb(160, 185, 148);
+  --header-border-bot: 3px solid rgb(45, 71, 42);
+  --header-text-size: 40px;
+  --main-bg: url(./assets/images/NatureBG.png);
+  --main-bg-size: 100%;
+  --sidebar-bg: rgb(63, 99, 58);
+  --sidebar-border-right: 3px solid rgb(45, 71, 42);
+}
+
+[data-theme = 'futuristic'] {
+  --header-bg: radial-gradient(rgb(0, 183, 255), blue);
+  --header-text-font: 'Warpen', serif;
+  --header-text-color: rgb(151, 255, 255);
+  --header-text-size: 40px;
+  --header-border-bot: 5px solid rgb(119, 0, 255);
+  --main-bg: radial-gradient(rgb(191, 237, 255), rgb(97, 156, 160));
+  --main-bg-size: 100%;
+  --sidebar-bg: radial-gradient(rgb(0, 183, 255), blue);
+  --sidebar-border-right: 3px solid rgb(119, 0, 255);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--main-bg);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--main-bg);
+  background-size: 100%;
+}
+
+.header-container {
+  height: 7%;
+  width: 100%;
+  background: var(--header-bg);
+  display: flex;
+  align-items: center;
+  border-bottom: var(--header-border-bot);
+}
+
+.header-content {
+  margin: 0 auto; 
+  width: 80%; 
+  max-width: 1200px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content h1 {
+  font-family: var(--header-text-font);
+  color: var(--header-text-color);
+  font-size: var(--header-text-size);
+  align-items: safe;
+}
+
+.header-content h1 {
+  margin: 0;
+}
+
+.toggle-sidebar-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.sidebar-hidden {
+  transform: translateX(-10%);
+}
+
+.content-container {
+  margin-left: -13%;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  transition: margin-left 0.3s ease;
+}
+
+.content-full{
+  margin-left: 0%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 10%;
+  background: var(--sidebar-bg);
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-right: var(--sidebar-border-right);
+  flex-shrink: 0;
+  align-items: center;
+  transition: transform 0.3s ease; 
+  transform: translateX(0);   
+  position: relative;      
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar a-hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.main-content {
+  width: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content > * {
+  max-width: 100;
+  box-sizing: border-box;
+}
+
+.main-content button {
+  background-color: #edd7d7;
+  border: 1px solid #ccc;
+  padding: 10px 30px;
+  border-radius: 10px;
+  text-align: center;
+  text-indent: -5px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+
+/* Custom Fonts Declaration */
+@font-face {
+  font-family: 'BarbieFont';
+  src: url(./assets/CustomFonts/Barbie.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Default';
+  src: url(./assets/CustomFonts/Square.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Aot';
+  src: url(./assets/CustomFonts/Ditty.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nature';
+  src: url(./assets/CustomFonts/SailerTrial-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Warpen';
+  src: url(./assets/CustomFonts/Warpen.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Neo-Sans';
+  src: url(./assets/CustomFonts/NeoSans.TTF) format('truetype');
+}

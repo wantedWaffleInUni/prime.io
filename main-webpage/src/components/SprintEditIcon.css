@@ -1,0 +1,68 @@
+.sprint-detail-icons {
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .sprint-detail-icons button {
+    height: auto;
+    width: auto;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+} */
+
+.sprint-detail-icons button:hover {
+    background-color: grey;
+}
+
+.edit-button {
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.edit-button::after{
+    content: "Edit sprint details";
+    padding: 5px 2px 5px 2px;
+    border-radius: 10px;
+    position: absolute;
+    left: 15px;
+    background-color: rgb(197, 197, 197, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 2s;
+    transition: opacity 0.3s ease;
+}
+
+.edit-button:hover::after{
+    visibility: visible;
+    opacity: 1;
+}
+
+.chart-button {
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.chart-button::after {
+    content: "View burndown chart";
+    padding: 5px 2px 5px 2px;
+    border-radius: 10px;
+    position: absolute;
+    left: 15px;
+    background-color: rgb(197, 197, 197, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 2s;
+    transition: opacity 0.3s ease;
+}
+
+.chart-button:hover::after {
+    visibility: visible;
+    opacity: 1;
+}

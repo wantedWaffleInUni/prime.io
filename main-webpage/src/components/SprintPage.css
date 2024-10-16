@@ -1,0 +1,56 @@
+.sprint-board {
+    display: flex;
+    flex-wrap: wrap;   /* Allows the cards to wrap to the next row */
+    gap: 20px;         /* Space between the cards */
+    padding: 20px;
+    background: var(--main-bg);
+    background-size: var(--main-bg-size);
+  }
+  
+  .sprint-card {
+    width: 180px;              /* Adjust width to maintain square shape */
+    height: 180px;             /* Adjust height for square shape */
+    border: var(--sprint-card-border);
+    border-radius: 20px;       /* Makes the card a rounded square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding: 10px;
+    flex-direction: column;    /* Aligns text and details vertically */
+  }
+  
+  .sprint-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .sprint-card h3 {
+    padding: 25px 0px 25px 0px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .sprint-details p {
+    margin: 4px 0;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .add-sprint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .add-sprint span {
+    font-size: 50px;
+    color: #4caf50;
+  }
+  
+  .add-sprint p {
+    margin: 0;
+    color: #555;
+  }

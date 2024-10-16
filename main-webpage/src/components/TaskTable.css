@@ -1,0 +1,29 @@
+table {
+    font-family: var(--main-font);
+    font-size: large;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+table td{
+    border: 1px solid #bfbaba;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+table tr:nth-child(even){background-color: #fbe7e7d2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+    background-color: #f1ececd2;
+    border: 1px solid #bfbaba;
+    padding: 8px;
+    border-radius: 10px;
+    padding-top: 12px;
+    /* padding-bottom: 12px; */
+    text-align: left;
+}
+
