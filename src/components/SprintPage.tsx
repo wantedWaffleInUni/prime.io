@@ -6,18 +6,7 @@ import axios from 'axios';
 import SprintView from './SprintView';
 import EditSprintModal from './EditSprintModal';
 import './SprintPage.css';
-import SprintKanban from './SprintKanban'; // Import the SprintKanban component
 
-interface SprintKanbanProps {
-  sprint: {
-    _id: string;
-    sprintName: string;
-    sprintStartDate: string;
-    sprintEndDate: string;
-    status: string;
-    totalLoggedTime: number;
-  };
-}
 interface Sprint {
   _id: string;
   sprintName: string;
@@ -30,12 +19,8 @@ interface Sprint {
 const SprintBoard: React.FC = () => {
   const [sprints, setSprints] = useState<Sprint[]>([]);
   const [showModal, setShowModal] = useState(false);
-  const [isSprintStarted, setIsSprintStarted] = useState(false); // Track if a sprint is started
   const [activeSprint, setActiveSprint] = useState<Sprint | null>(null);
   const [showEditModal, setShowEditModal] = useState(false);
-
-  // State for managing ForceStartSprintButton's disabled state
-  const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
     const fetchSprints = async () => {
@@ -80,9 +65,6 @@ const SprintBoard: React.FC = () => {
   return (
     <div className="sprint-board">
       {/* Render only the SprintKanban if a sprint is started */}
-      {isSprintStarted && activeSprint ? (
-        <SprintKanban sprint={activeSprint} /> // Show SprintKanban when the sprint is active
-      ) : (
         <>
           {/* <ForceStartSprintButton
             onStart={handleForceStart}
@@ -126,7 +108,7 @@ const SprintBoard: React.FC = () => {
             />
           )}
         </>
-      )}
+      
     {/*
   Force Start Sprint button at the bottom right
   <div className="force-start-wrapper">

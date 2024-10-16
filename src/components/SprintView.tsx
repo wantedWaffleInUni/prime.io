@@ -18,7 +18,6 @@ interface SprintViewProps {
 
 const SprintView: React.FC<SprintViewProps> = ({ sprint, onBack }) => {
   const [sprintStatus, setSprintStatus] = useState<string>('Not Started');
-  const [isActive, setIsActive] = useState(false); // Track if the sprint is active
   const [isDisabled, setIsDisabled] = useState(false); // Track if the Force Start button is disabled
 
   useEffect(() => {
@@ -35,16 +34,7 @@ const SprintView: React.FC<SprintViewProps> = ({ sprint, onBack }) => {
     }
   }, [sprint.sprintStartDate, sprint.sprintEndDate]);
 
-  // Load active state from local storage when the component mounts
-  useEffect(() => {
-    const storedActiveState = localStorage.getItem(`activeSprint_${sprint.sprintName}`);
-    if (storedActiveState === 'true') {
-      setIsActive(true);
-    }
-  }, [sprint.sprintName]);
-
   const handleStartSprint = async () => {
-    setIsActive(true); // Set sprint as active
     setSprintStatus('Active');
     const currentDate = new Date();
     const startSprint = { ...sprint, status: 'Active', sprintStartDate: currentDate.toISOString() };
@@ -62,11 +52,6 @@ const SprintView: React.FC<SprintViewProps> = ({ sprint, onBack }) => {
   const disableForceStartButton = () => {
     setIsDisabled(true);
   }
-
-  const handleEndSprint = () => {
-    setIsActive(false); // Set sprint as inactive
-    localStorage.removeItem(`activeSprint_${sprint.sprintName}`); // Remove active state
-  };
 
   return (
     <div className="sprint-view-container">

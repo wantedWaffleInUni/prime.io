@@ -105,6 +105,7 @@ const DashboardPage: React.FC = () => {
         `http://localhost:5000/updateUserSecurity/${user._id}`,
         userData
       );
+      console.log('User security question updated:', result.data);
       const newLoginCount = loginCount + 1;
       setLoginCount(newLoginCount);
       localStorage.setItem('loginCount', newLoginCount.toString());

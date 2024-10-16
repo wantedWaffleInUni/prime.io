@@ -1,7 +1,5 @@
-import React from "react";
 import { Draggable } from "react-beautiful-dnd";
 import styled from "styled-components";
-import { Avatar } from "antd";
 
 const Container = styled.div<{ isDragging: boolean }>`
     border-radius: 10px;
@@ -19,23 +17,6 @@ const Container = styled.div<{ isDragging: boolean }>`
 `;
 
 const TextContent = styled.div``;
-
-const Icons = styled.div`
-    display: flex;
-    justify-content: end;
-    padding: 2px;
-`;
-// function bgcolorChange(props) {
-//     return props.isDragging
-//         ? "lightgreen"
-//         : props.isDraggable
-//             ? props.isBacklog
-//                 ? "#F2D7D5"
-//                 : "#DCDCDC"
-//             : props.isBacklog
-//                 ? "#F2D7D5"
-//                 : "#EAF4FC";
-// }
 
 interface Task {
     _id: string;

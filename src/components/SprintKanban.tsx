@@ -16,11 +16,6 @@ interface SprintKanbanProps {
   };
 }
 
-type ColumnType = {
-  name: string;
-  items: { id: string; taskName: string }[];
-};
-
 const SprintKanban: React.FC<SprintKanbanProps> = ({ sprint }) => {
   interface Task {
     _id: string;

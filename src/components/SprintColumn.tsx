@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Card from "./SprintDragCard";
 import './SprintScroll.css';
@@ -66,7 +65,7 @@ export default function SprintColumn({ title, tasks, id }: ColumnProps) {
                 {title}
             </Title>
             <Droppable droppableId={id} type = 'group'>
-                {(provided, snapshot) => (
+                {(provided) => (
                     <TaskList
                         ref={provided.innerRef}
                         {...provided.droppableProps}

@@ -136,12 +136,6 @@ const TaskTable: React.FC = () => {
     closeModal();
   };
 
-  // Helper to format the createdAt date
-  const formatDate = (dateString: Date) => {
-    const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "short", day: "numeric" };
-    return new Date(dateString).toLocaleDateString(undefined, options);
-  };
-
   return (
     <div>
       {/* Sort by buttons integrated directly inside TaskTable */}

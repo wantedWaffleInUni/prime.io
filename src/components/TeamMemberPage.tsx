@@ -32,7 +32,7 @@ interface Task {
 const TeamMemberPage: React.FC<userProps> = ({user}) => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-  const [dayCount, setDayCount] = useState(0);
+  // const [dayCount, setDayCount] = useState(0);
   const [times, setTimes] = useState<any>([]);
   const [tasks, setTasks] = useState<Task[]>([]); // State to store tasks
 
@@ -45,7 +45,7 @@ const TeamMemberPage: React.FC<userProps> = ({user}) => {
   const handleSelect = (date: any) => {
     setStartDate(date.selection.startDate);
     setEndDate(date.selection.endDate);
-    setDayCount(Math.round((date.selection.endDate - date.selection.startDate) / (1000 * 60 * 60 * 24)));
+    // setDayCount(Math.round((date.selection.endDate - date.selection.startDate) / (1000 * 60 * 60 * 24)));
   };
 
   useEffect(() => {
