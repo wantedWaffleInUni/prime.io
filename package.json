@@ -6,13 +6,13 @@
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npm run start-server\"",
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start-server": "node ./src/server.js",
-    "dev-server": "nodemon server.js",
-    "predeploy" : "npm run build",
-    "deploy" : "main -d dist"
+    "dev-server": "nodemon server.js"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
